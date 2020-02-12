@@ -9,7 +9,8 @@ public class ImageRecognition {
     // File Directory for MNist data
     private static final String DIRECTORY = System.getProperty("user.dir") + "/MNistData";
 
-    //HyperParameters
+    //Hyper Parameters
+    //Personally the best hyper parameters i have seen this far with this set up.
     private static final int EPOCHS = 30, BATCH_SIZE = 10;
     private static final double LEARNING_RATE = 3;
 
@@ -32,7 +33,7 @@ public class ImageRecognition {
             testLabels = reader.getTestLabels();
         } catch(IOException ignored) {
         }
-
+        // This seems to be the best network setup with the current setup.
         int[] layout = {784, 30, 10};
         Network net = new Network(layout);
         net.training(trainingImages, trainingLabels, testImages, testLabels, BATCH_SIZE, LEARNING_RATE, EPOCHS);
