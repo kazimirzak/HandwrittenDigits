@@ -1,4 +1,4 @@
-#Handwritten Digits Classifier
+# Handwritten Digits Classifier
 
 Project I made in my spare time. 
 
